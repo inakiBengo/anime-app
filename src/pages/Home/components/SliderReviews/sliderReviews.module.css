@@ -1,0 +1,153 @@
+
+:root {
+  --card-height: 25rem;
+  --user-height: 60px;
+}
+
+.loader {
+  display: grid;
+  place-content: center;
+  height: var(--card-height);
+
+  & svg {
+    width: 50px;
+  }
+}
+
+.embla {
+  overflow: hidden;
+}
+.embla__viewport {
+  position: relative;
+  overflow: hidden;
+  margin: 1rem;
+}
+.embla__container {
+  display: flex;
+}
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+  height: var(--card-height);
+}
+/* buttons */
+.embla__buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+
+  & button {
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    border: none;
+    background-color: #0000006f;
+    color: #ffffff5a;
+    cursor: pointer;
+  }
+}
+/* dots */
+.embla__dots {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  padding: 0.2rem;
+
+  & .embla__dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+
+.ReviewCard {
+  background-color: var(--color-4);
+  height: var(--card-height);
+  padding: 1rem var(--padding-side);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.user {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  height: var(--user-height);
+
+  & img {
+    background-color: var(--color-1);
+    width: var(--user-height);
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+  }
+
+  & .userText {
+    color: var(--color-font);
+
+    & .title {
+      font-weight: 900;
+    }
+    & .date {
+      opacity: 0.7;
+      font-weight: 100;
+      font-size: 1em;
+      line-height: 1em;
+    }
+  }
+}
+
+.content {
+  color: var(--color-font);
+  
+  & .anime {
+    display: none;
+    visibility: hidden;
+    width: 10rem;
+
+    & img {
+      width: 10rem;
+      margin: auto;
+    }
+
+    & .stars {
+      display: flex;
+      justify-content: center;
+    }
+
+    & .name {
+      font-weight: 700;
+      text-align: center;
+      line-height: 1.1em;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  & .text {
+    height: calc(var(--card-height) - var(--user-height) - 2rem);
+    overflow: auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .content {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1rem;
+
+    & .anime {
+      display: grid;
+      place-content: center;
+      visibility: visible;
+      flex: 1;
+      
+    }
+  }
+}

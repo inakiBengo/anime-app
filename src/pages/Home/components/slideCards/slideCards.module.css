@@ -1,0 +1,96 @@
+.loader {
+  width: 100%;
+  height: calc(150px + 7em);
+  display: grid;
+  place-content: center;
+
+  & svg {
+    width: 50px;
+  }
+}
+
+.embla {
+  overflow: hidden;
+  height: calc(150px + 7em);
+}
+.embla__viewport {
+  position: relative;
+  overflow: hidden;
+}
+.embla__container {
+  display: flex;
+  gap: 1rem;
+}
+
+.embla__slide {
+  flex: 0 0 auto;
+  min-width: 0;
+}
+
+.embla__slide:last-child {
+  margin-right: 1rem;
+}
+
+.embla:hover {
+
+  & .embla__prev, .embla__next  {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+  }
+}
+.embla__prev, .embla__next {
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+  background-color: #0000006f;
+  color: #ffffff5a;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  font-size: 3em;
+  border: none;
+  cursor: pointer;
+}
+.embla__prev {
+  left: 0;
+}
+.embla__next {
+  right: 0;
+}
+
+.card {
+  height: auto;
+  width: 150px;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  cursor: pointer;
+
+  & .image {
+    height: 210px;
+    width: 100%;
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit:cover;
+    }
+  }
+
+  & .text {
+    height: 2.4em;
+    background-color: var(--color-3);
+    padding: 0.2rem;
+    
+    & p {
+      color: var(--color-font);
+      line-height: 1.2em;
+      font-size: 0.8em;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}

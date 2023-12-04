@@ -1,0 +1,145 @@
+:root {
+  --banner-height: 90vw;
+}
+
+.loader {
+  width: 100%;
+  height: var(--banner-height);
+  display: grid;
+  place-content: center;
+}
+
+.banner {
+  width: 100%;
+  height: var(--banner-height);
+  position: relative;
+  z-index: 90;
+}
+
+.info {
+  height: var(--banner-height);
+  display: flex;
+  grid-template-columns: 0.8fr 1fr;
+  gap: 0.4rem;
+  align-items: center;
+  padding-left: var(--padding-side);
+  position: absolute;
+  z-index: 92;
+
+  & img {
+    height: calc(var(--banner-height) / 1.5);
+    object-fit: contain;
+    display: none;
+    visibility: hidden;
+  }
+
+  & .text {
+    height: calc(var(--banner-height) / 1.5);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    color: var(--color-font);
+
+    & .title {
+      line-height: 1em;
+      font-size: 3em;
+      font-weight: 900;
+    }
+
+    & .genres {
+      display: flex;
+      gap: 0.5rem;
+      font-size: 0.8em;
+    }
+
+    & .broadcast {
+      font-size: 0.8em;
+    }
+
+    & .stars {
+      display: flex;
+    }
+  }
+}
+
+.image {
+  height: var(--banner-height);
+  display: flex;
+  justify-content: end;
+  position: relative;
+  z-index: 91;
+
+  & .background {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient( 90deg, var(--color-1) 35%, transparent);
+    position: absolute;
+    z-index: 90;
+  }
+
+  & .elementsBackground {
+    display: flex;
+    position: relative;
+  }
+
+  & img, iframe {
+    height: var(--banner-height);
+    position: absolute;
+    z-index: 80;
+    top: 0;
+    right: 0;
+  }
+
+  & iframe {
+    height: var(--banner-height);
+    aspect-ratio: 1/1;
+  }
+
+  .invisible {
+    visibility: hidden;
+    opacity: 0;  
+    transition: all 0.3s ease-in;
+    z-index: 79;
+  }
+}
+
+@media (min-width: 425px) {
+  :root {
+    --banner-height: 60vw;
+  }
+  .info {
+    gap: 1rem;
+
+    & img {
+      display: block;
+      visibility: visible;
+    }
+  }
+
+  .image {
+    & iframe {
+      aspect-ratio: 2/1.5;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  :root {
+    --banner-height: 45vw;
+  }
+  .text {
+    gap: 0.4rem;
+  }
+  .image {
+    & iframe {
+      aspect-ratio: 2/1.13;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --banner-height: 40vw;
+  }
+}

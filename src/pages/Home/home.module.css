@@ -1,0 +1,19 @@
+.home {
+  background: linear-gradient(var(--color-1) 50%, var(--color-5));
+  min-height: 100vh;
+  & h2 {
+    padding-left: var(--padding-side);
+    color: var(--color-font);
+  }
+}
+
+.topAnimes {
+  position: relative;
+  top: 0px;
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  .topAnimes {
+    /* top: -45px; */
+  }
+}
