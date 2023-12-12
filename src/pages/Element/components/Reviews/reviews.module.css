@@ -1,0 +1,92 @@
+.reviews {
+  padding: 0 var(--padding-side);
+  display: grid;
+  place-content: center;
+
+  & h2 {
+    color: var(--color-font);
+    font-size: 1.5em;
+    font-weight: 900;
+  }
+}
+
+
+.review {
+  color: var(--color-font);
+  width: 60vw;
+
+  & .user {
+    display: flex;
+    background-color: var(--color-5);
+    padding: 0.5rem;
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+
+    & img {
+      width: 2rem;
+      height: 2rem;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    & .text {
+      height: 2.5em;
+      padding-left: 1rem;
+      margin-right: auto;
+
+      & p {
+        line-height: 1em;
+      }
+      & :first-child {
+        font-size: 1.5em;
+      }
+      & :last-child {
+        opacity: 0.6;
+      }
+    }
+
+    & .openButton {
+      background-color: transparent;
+      border: none;
+      color: var(--color-font);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+
+      & p {
+        font-size: 1.5em;
+      }
+      & i {
+        font-size: 2em;
+      }
+    }
+    & .openButton:hover {
+      color: var(--color-4);
+    }
+  }
+
+  & .comment {
+    background-color: var(--color-2);
+    overflow: hidden;
+    padding: 1rem;
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+    margin-bottom: 1rem;
+
+    & .line_noClamp {
+      text-wrap:  wrap;
+    }
+
+    & .line_clamp {
+      display: -webkit-box;
+      -webkit-line-clamp: 8;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .review {
+    max-width: 832px;
+  }
+}

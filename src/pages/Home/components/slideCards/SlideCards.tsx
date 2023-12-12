@@ -10,13 +10,14 @@ import { Loader } from "../../../../components/Loader/Loader"
 interface Props {
   slug: string
   time: number
+  element: 'anime' | 'manga'
 }
 interface Data {
   data: undefined | typeTopAnime
   loding: undefined | boolean
 }
 
-const SlideCards = ({slug, time}: Props) => {
+const SlideCards = ({slug, time, element}: Props) => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true })
   const {data, loding}: Data = useFetch(slug, time)
 
@@ -39,7 +40,7 @@ const SlideCards = ({slug, time}: Props) => {
             {
               data?.data.map((anime: Datum) => 
               <div className={style.embla__slide} key={anime.mal_id}>
-                <Cards {...anime}/>
+                <Cards {...anime} element={element}/>
               </div>
               )
             }

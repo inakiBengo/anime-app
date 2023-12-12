@@ -20,13 +20,13 @@ const ReviewCard = (review: Daum) => {
 
       <div className={styles.content}>
 
-        <div className={styles.anime}>
+        <a href={`/element/anime/${review.entry.mal_id}`} className={styles.anime}>
           <img src={review.entry.images.jpg.image_url} alt="" />
           <div className={styles.stars}>
             <Stars stars={review.score}/>
           </div>
           <p className={styles.name}>{review.entry.title}</p>
-        </div>
+        </a>
 
         <div className={styles.text}>
           <p>{review.review}</p>

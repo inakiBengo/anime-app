@@ -1,0 +1,13 @@
+.youtube {
+  color: var(--color-font);
+  padding: var(--padding-side);
+
+  & iframe {
+    width: 100%;
+    aspect-ratio: 2/1;
+  }
+
+  & h2 {
+    font-weight: 900;
+  }
+}

@@ -1,9 +1,10 @@
-export interface typeTopAnime {
+export type typeTopAnime = {
   pagination: Pagination;
-  data:       Datum[];
+  data:       Datum;
 }
 
 export interface Datum {
+  element:         'anime' | 'manga'
   mal_id:          number;
   url:             string;
   images:          { [key: string]: Image };
@@ -34,12 +35,65 @@ export interface Datum {
   year:            number;
   broadcast:       Broadcast;
   producers:       Demographic[];
-  licensors:       any[];
+  licensors:       Licensor[];
   studios:         Demographic[];
   genres:          Demographic[];
-  explicit_genres: any[];
-  themes:          any[];
+  explicit_genres: Explicit_genre[];
+  themes:          Theme1[];
+  theme:           Song
   demographics:    Demographic[];
+  published:       Publish;
+  streaming:       Streaming[];
+  external:        Externals[];
+  relations:       Relation[]
+}
+
+export interface Relation {
+  entry: Theme1[]
+  relation: string
+}
+
+export interface Externals {
+  name: string
+  url: string
+}
+
+export interface Song {
+  openings: string[]
+  endings: string[]
+}
+
+export interface Streaming {
+  name: string
+  url:  string
+}
+
+export interface Publish {
+  from:   string
+  to:     string
+  string: string
+  prop:{
+    from: {day: number, month: number, year: number} 
+    to:   {day: number, month: number, year: number} 
+  }
+}
+
+export interface Theme1 {
+  mal_id: number
+  name: string
+  type: string
+  url: string
+}
+
+export interface Explicit_genre {
+
+}
+
+export interface Licensor {
+  mal_id: number 
+  name: string
+  type: string
+  url: string
 }
 
 export interface Aired {

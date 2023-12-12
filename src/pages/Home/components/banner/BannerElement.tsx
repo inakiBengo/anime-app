@@ -22,6 +22,7 @@ const BannerElement = (anime: Datum) => {
           </div>
           <p className={styles.broadcast}>Broadcast: {anime.broadcast.string}</p>
           <Stars stars={anime.score} />
+          <a href={`/element/anime/${anime.mal_id}`} className={styles.seeMore}>See more</a>
         </div>
       </div>
 

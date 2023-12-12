@@ -37,6 +37,7 @@
   list-style: none;
   font-family: 'jost';
   font-weight: 500;
+  scroll-behavior: smooth;
 }
 
 :root {
@@ -46,7 +47,7 @@
   --color-4: #fb5934;
   --color-5: #ff923a;
   --color-font: #dfdfdf;
-  --padding-side: 2rem;
+  --padding-side: 1rem;
   --border-radius: 8px;
 }
 

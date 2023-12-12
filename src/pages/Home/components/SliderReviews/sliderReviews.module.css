@@ -20,7 +20,7 @@
 .embla__viewport {
   position: relative;
   overflow: hidden;
-  margin: 1rem;
+  margin: 0 var(--padding-side);
 }
 .embla__container {
   display: flex;
@@ -107,6 +107,8 @@
     display: none;
     visibility: hidden;
     width: 10rem;
+    color: var(--color-font);
+    transition: all 0.3s;
 
     & img {
       width: 10rem;
@@ -129,10 +131,22 @@
       text-overflow: ellipsis;
     }
   }
+  .anime:hover {
+    scale: 0.9;
+  }
 
   & .text {
     height: calc(var(--card-height) - var(--user-height) - 2rem);
     overflow: auto;
+  }
+  & .text::-webkit-scrollbar {
+    width: 12px;
+  }
+  & .text::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  & .text::-webkit-scrollbar-thumb {
+    background-color: var(--color-1);
   }
 }
 

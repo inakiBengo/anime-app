@@ -1,0 +1,52 @@
+.recommendations {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  width: 100%;
+  color: var(--color-font);
+}
+
+.card {
+  width:fit-content;
+
+  & .entryCard {
+    display: block;
+    width: 180px;
+    color: var(--color-font);
+    transition: all 0.3s ease-in-out;
+    border-radius: var(--border-radius);
+
+    & .image {
+      transition: all 0.3s ease-in-out;
+
+      & img {
+        width: 100%;
+        object-fit: contain;
+        border-radius: var(--border-radius);
+      }
+    }
+    & .text {
+      padding: 0.5rem;
+      padding-top: 0;
+
+      & p {
+        font-size: 1.2em;
+        line-height: 1em;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+}
+.entryCard:hover {
+  background-color: var(--color-5);
+
+  & .image {
+
+    scale: 0.9;
+  }
+}

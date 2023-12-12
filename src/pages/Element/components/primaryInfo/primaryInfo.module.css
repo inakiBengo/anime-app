@@ -1,0 +1,108 @@
+:root {
+  --width-imageBannerElement: 117px;
+}
+
+.loader {
+  width: 100%;
+  display: grid;
+  place-content: center;
+}
+
+.primaryInfo {
+  padding: 0 var(--padding-side);
+  display: grid;
+  grid-template-columns: var(--width-imageBannerElement) 1fr;
+  gap: 0.2rem;
+  height: var(--heigth-primaryInfo);
+}
+
+.image {
+  position: relative;
+  z-index: 90;
+
+  & img {
+    position: absolute;
+    z-index: 90;
+    bottom: 0;
+    width: 100%;
+  }
+}
+
+.info {
+  color: var(--color-font);
+  padding: var(--padding-side) 0;
+
+  & .text {
+
+    
+    & .stars {
+      display: flex;
+      align-items: center;
+
+      & p {
+        opacity: 0.8;
+        font-size: 0.7em;
+      }
+    }
+
+    & .favorites {
+      display: flex;
+      gap: 0.5rem;
+
+      & p {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  & .animeList {
+    color: var(--color-font);
+    text-decoration: underline;
+    width: fit-content;
+  }
+  & .animeList:hover {
+    color: var(--color-5);
+  }
+}
+
+@media (min-width: 425px) {
+  :root {
+    --width-imageBannerElement: 150px;
+  }
+  .info { 
+    padding: var(--padding-side);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    
+    & .text {
+        font-size: 1.2em;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  :root {
+    --width-imageBannerElement: 200px;
+  }
+  .info {
+
+    & .text {
+      font-size: 1.8em;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --width-imageBannerElement: 200px;
+  }
+  .info {
+
+    & .text {
+      display: flex;
+      gap: 2rem;
+      font-size: 2em;
+    }
+  }
+}

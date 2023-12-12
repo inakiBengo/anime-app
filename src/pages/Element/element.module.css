@@ -1,0 +1,61 @@
+.elemet {
+  background: linear-gradient(var(--color-1) 50%, var(--color-5));
+  min-height: 100vh;
+
+  & .header, .content {
+    max-width: 1440px;
+    margin: auto;    
+  }
+}
+
+.loader {
+  display: grid;
+  place-content: center;
+  padding-top: 10rem;
+}
+
+.aside {
+  display: none;
+}
+
+.synopsisPc {
+  display: none;
+}
+
+.aside, .templateGrid, .episodes, .gallery, .reviews {
+  display: none;
+}
+.content .recommendations {
+  display: block;
+}
+@media (min-width: 768px) {
+  .content {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr ;
+  }
+
+  .container {
+    & .synopsis {
+      & .synopsisPc {
+        display: block;
+      }
+      & .MovilSynopsis {
+        display: none;
+      }
+    }
+
+    & .information, .recommendations {
+      display: none;
+    }
+
+    & .templateGrid, .episodes, .gallery, .reviews {
+      display: block;
+    }
+  }
+
+  .aside {
+    display: block;
+
+  }
+  
+}

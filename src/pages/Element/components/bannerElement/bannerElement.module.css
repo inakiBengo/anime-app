@@ -1,0 +1,28 @@
+:root {
+  --bannerElement-height: 200px;
+}
+
+.banner {
+  height: var(--bannerElement-height);
+  position: relative;
+  z-index: 80;
+
+  & img {
+    height: var(--bannerElement-height);
+    width: 100%;
+    object-fit: cover;
+  }
+
+  & .id {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: var(--color-font);
+    opacity: 0.8;
+    font-size: 4em;
+    line-height: 1em;
+    margin: var(--padding-side);
+    background-color: var(--color-1);
+    border-radius: var(--border-radius);
+  }
+}

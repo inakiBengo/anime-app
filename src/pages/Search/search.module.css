@@ -1,0 +1,15 @@
+.search {
+  background: linear-gradient(var(--color-1) 50%, var(--color-5));
+  min-height: 100vh;
+}
+
+.browseAll {
+  padding: 0 var(--padding-side);
+  padding-top: 5rem;
+
+  & h2 {
+    font-size: 3em;
+    color: var(--color-font);
+    font-weight: 900;
+  }
+}

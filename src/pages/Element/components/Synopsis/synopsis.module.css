@@ -1,0 +1,7 @@
+.synopsis {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: var(--color-font);
+  padding: 0 var(--padding-side);
+}

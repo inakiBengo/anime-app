@@ -60,6 +60,18 @@
     & .stars {
       display: flex;
     }
+    & .seeMore {
+      width: fit-content;
+      background-color: var(--color-5);
+      color: var(--color-font);
+      border: none;
+      padding: 0.5rem 2rem;
+      border-radius: var(--border-radius);
+      cursor: pointer;
+    }
+    & .seeMore:hover {
+      background-color: var(--color-4);
+    }
   }
 }
 
@@ -81,6 +93,8 @@
   & .elementsBackground {
     display: flex;
     position: relative;
+    width: 100%;
+    overflow: hidden;
   }
 
   & img, iframe {
@@ -143,3 +157,10 @@
     --banner-height: 40vw;
   }
 }
+
+@media (min-width: 1440px) {
+  :root {
+    --banner-height: 533px;
+  }
+}
+

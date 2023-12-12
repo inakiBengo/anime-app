@@ -1,0 +1,36 @@
+:root {
+  --scale-card: 11rem;
+}
+
+.cardGrid {
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(var(--scale-card), 1fr));
+  gap: 1rem;
+  padding: var(--padding-side);
+}
+
+.card {
+  display: block;
+  width: var(--scale-card);
+  height: var(--scale-card);
+  padding: 0.5rem;
+  color: var(--color-font);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+
+  & img {
+    position: absolute;
+    height: 9rem;
+    object-fit: contain;
+    bottom: -9px;
+    right: -9px;
+    rotate: 345deg;
+  }
+}
+.card:hover {
+  filter: grayscale(1);
+  scale: 1.1;
+}

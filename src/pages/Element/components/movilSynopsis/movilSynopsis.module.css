@@ -1,0 +1,52 @@
+.movilSynopsis {
+  margin: var(--padding-side);
+  margin-bottom: 0;
+  line-height: 1.4em;
+  color: var(--color-font);
+  height: 150px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: all 0.3s;
+
+  & h2 {
+    font-weight: 900;
+  }
+}
+
+.movilSynopsisOpen {
+  margin: var(--padding-side);
+  margin-bottom: 0;
+  line-height: 1.4em;
+  color: var(--color-font);
+  height: auto;
+  overflow: hidden;
+  position: relative;
+  display: flex;  
+  flex-direction: column;
+  gap: 1rem;
+  transition: all 0.3s;
+
+  & h2 {
+    font-weight: 900;
+  }
+}
+
+.readMore {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 0 var();
+  background: linear-gradient( transparent, var(--color-1));
+  width: 100%;
+  padding-top: 2rem;
+  text-align: center;
+
+  & button {
+    background-color: transparent;
+    border: none;
+    color: var(--color-font);
+  }
+}

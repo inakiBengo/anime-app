@@ -1,7 +1,7 @@
 import 'bootstrap-icons/font/bootstrap-icons.css'
 
 interface props {
-  stars: number
+  stars: number | undefined
 }
 
 const Stars = ({stars}: props)=> {

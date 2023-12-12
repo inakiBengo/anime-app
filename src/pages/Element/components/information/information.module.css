@@ -1,0 +1,100 @@
+.information {
+  padding: var(--padding-side);
+}
+
+.typeInfo {
+  color: var(--color-font);
+  font-size: 1.4em;
+  font-weight: 900;
+}
+
+.tableInformation {
+  color: var(--color-font);
+  text-align: left;
+  border-collapse: collapse;
+  vertical-align: baseline;
+
+  & tbody {
+    vertical-align: baseline;
+  }
+
+  & span {
+    display:flex;
+  }
+  & td {
+    opacity: 0.8;
+  }
+  .title {
+    color: var(--color-font);
+    opacity: 1;
+  }
+}
+
+.music {
+  margin-top: 1rem;
+  color: var(--color-font);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  & .title {
+    font-weight: 900;
+    font-size: 1.1em;
+  }
+
+  & span {
+    display: block;
+    opacity: 0.8;
+  }
+}
+
+.members {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  & .headerMembers {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    color: var(--color-font);
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+
+    & i {
+      font-size: 1.2em;
+    }
+  }
+
+  & .membre {
+    overflow: hidden;
+  }
+
+  & .informationMembre {
+    display: flex;
+    flex-direction: column;
+    padding-left: 1rem;
+
+    & a {
+      color: var(--color-font);
+      font-size: 1.2em;
+      text-decoration: underline;
+    }
+  }
+}
+
+.externals {
+  margin-top: 1rem;
+
+  & a {
+    display: block;
+    width:fit-content;
+    color: var(--color-font);
+    text-decoration: underline;
+    padding-left: 1rem;
+    font-size: 1.2em;
+    font-weight: 700;
+  }
+}

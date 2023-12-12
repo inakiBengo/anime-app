@@ -2,12 +2,22 @@
   --header-height: 4rem;
 }
 
+.headerContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: var(--header-height);
+  background-color: transparent;
+  position: fixed;
+  z-index: 99;
+}
+
+
 .header {
   transition: all 0.2s ease-in;
   height: var(--header-height);
-  width: 100%;
+  width: 1440px;
   background-color: transparent;
-  position: fixed;
   z-index: 99;
   color: var(--color-font);
   display: flex;
@@ -57,9 +67,10 @@ nav {
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .header {
     justify-content: start;
+    
   }
 
   nav {
@@ -78,4 +89,8 @@ nav {
       }
     }
   }
+}
+
+@media (min-width: 1440px) {
+  
 }

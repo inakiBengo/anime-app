@@ -1,0 +1,40 @@
+.Title {
+  color: var(--color-font);
+  padding: 1rem var(--padding-side) 0;
+
+  & h1 {
+    font-size: 2em;
+    font-weight: 900;
+    line-height: 1em;
+  }
+}
+
+.info {
+  
+  & p {
+    font-size: 3em;
+    font-weight: 900;
+    opacity: 0.7;
+  }
+  
+  & .streaming {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.2rem;
+
+    & a {
+      color: var(--color-font);
+      background-color: var(--color-5);
+      padding:0 0.2rem;
+      border-radius: var(--border-radius);
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+}

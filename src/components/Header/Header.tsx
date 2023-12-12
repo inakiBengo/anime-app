@@ -15,6 +15,7 @@ const Header = () => {
   }, [])
 
   return (
+    <div className={styles.headerContainer}>
     <header className={styles.header} style={color ?{backgroundColor: 'transparent'} :{backgroundColor: 'var(--color-1)'}}>
 
         <div className={styles.logo}>
@@ -33,6 +34,7 @@ const Header = () => {
         </div>
 
     </header>
+    </div>
   )
 }
 

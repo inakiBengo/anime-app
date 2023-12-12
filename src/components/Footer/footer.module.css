@@ -1,0 +1,28 @@
+
+.container {
+  background-color: var(--color-1);
+  height: 5rem;
+  width: 100%;
+  display: none;
+}
+
+.footer {
+  max-width: 1440px;
+  margin: auto;
+  color: var(--color-font);
+  padding: 1rem var(--padding-side);
+  display: flex;
+  gap: 1rem;
+}
+
+.contact {
+  font-size: 1em;
+  font-weight: 900;
+  color: var(--color-font);
+}
+
+@media (min-width: 768px) {
+  .container {
+    display: block;
+  }
+}
