@@ -1,0 +1,77 @@
+
+.filter {
+  width: 100%;
+}
+
+.search {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1rem;
+  color: var(--color-font);
+  align-items: center;
+
+  & .filterButton {
+    background-color: var(--color-5);
+    border: none;
+    border-radius: var(--border-radius);
+    color: var(--color-font);
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    padding: 0.2rem 1rem;
+    cursor: pointer;
+  }
+  & .filterButton:hover {
+    background-color: var(--color-4);
+  }
+}
+
+.animeFilter {
+  margin-bottom: 0.1rem;
+
+  & .titleSlider {
+    font-size: 1em;
+    color: var(--color-font);
+  }
+  & .overflow {
+    display: flex;
+    gap: 0.5rem;
+    overflow-x: auto;
+    animation: 0.8s ease-in-out  1s slider;
+  }
+
+  & .tag {
+    background-color: var(--color-5);
+    color: var(--color-font);
+    line-height: 1em;
+    padding: 0.2rem 0.5rem;
+    border-radius: var(--border-radius);
+    border: none;
+    font-size: 1em;
+    cursor: pointer;
+  }
+
+  & .tag:hover {
+    background-color: var(--color-4);
+  }
+}
+
+@keyframes slider {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@media (min-width: 320px) {
+  .animeFilter {
+   .overflow {
+    animation: none;
+    }
+  }
+}

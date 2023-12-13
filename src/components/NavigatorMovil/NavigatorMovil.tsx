@@ -8,7 +8,7 @@ const NavigatorMovil = () => {
         <a href="/" className={styles.home}>
           <i className="bi bi-house"></i>
         </a>
-        <a href="/search" className={styles.search}>
+        <a href="/search/anime" className={styles.search}>
           <i className="bi bi-search"></i>
         </a>
         <a href="/about" className={styles.search}>

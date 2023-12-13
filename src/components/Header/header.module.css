@@ -41,29 +41,35 @@ nav {
 }
 
 .search {
-  display: flex;
-  align-items: center;
+  width: 80%;
 
-  & button {
-    background-color: transparent;
-    padding: 0.2rem;
-    border: none;
-    cursor: pointer;
+  & form {
+    display: flex;
+    align-items: center;
+    justify-content: end;
 
-    & i {
-      color: var(--color-font);
-      font-size: 1.5em;
+    & button {
+      background-color: transparent;
+      padding: 0.2rem;
+      border: none;
+      cursor: pointer;
+
+      & i {
+        color: var(--color-font);
+        font-size: 1.5em;
+      }
     }
-  }
 
-  & input {
-    transition: 0.3s all ease-in-out;
-    height: 1.5em;
-    background-color: var(--color-2);
-    border: var(--color-3) 2px solid;
-    border-radius: var(--border-radius);
-    color: var(--color-font);
-    padding: 0.2rem;
+    & input {
+      transition: 0.3s all ease-in-out;
+      height: 1.5em;
+      background-color: var(--color-2);
+      border: var(--color-3) 2px solid;
+      border-radius: var(--border-radius);
+      color: var(--color-font);
+      padding: 0.6rem 1rem;
+      margin-right: 1rem;
+    }
   }
 }
 
@@ -71,6 +77,10 @@ nav {
   .header {
     justify-content: start;
     
+  }
+
+  .search {
+    max-width: 280px;
   }
 
   nav {

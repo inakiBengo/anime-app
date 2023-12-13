@@ -23,7 +23,7 @@ const Episodes = ({mal_id}: Props) => {
     .catch(err => {console.error(err)})
     setLoding(false)
   }
-
+  console.log(data)
   useEffect(() => {
 
       fetching()
@@ -33,7 +33,7 @@ const Episodes = ({mal_id}: Props) => {
   return (
     <>
     {
-      data?.data.length <= 0
+      data && data?.data.length <= 0
       ?
       <div className={styles.episodesNotFound}>
         <img src="/public/notFound.png" alt="episodes not found" />

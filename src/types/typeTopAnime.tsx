@@ -1,6 +1,6 @@
 export type typeTopAnime = {
   pagination: Pagination;
-  data:       Datum;
+  data:       Datum[];
 }
 
 export interface Datum {
